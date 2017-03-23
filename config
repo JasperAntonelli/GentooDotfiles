@@ -13,7 +13,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font xft:System Sanfranciso Display 13
+font xft:System San Francisco Display 13
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -173,7 +173,7 @@ set $inactive-bg-color   #2f343f
 set $text-color          #f3f4f5
 set $inactive-text-color #676E7D
 set $urgent-bg-color     #E53935
-set $SBC		 #6a13c1
+set $SBC		 #d80a75
 
 # window colors
 #                       border              background         text                 indicator
@@ -193,7 +193,8 @@ gaps outer 25
 
 bar {
 	position top
-        status_command ~/.scripts/mybar.sh
+        #status_command ~/.scripts/mybar.sh
+	status_command i3blocks
 	colors {
 		background $bg-color
 	    	separator #757575
@@ -204,11 +205,7 @@ bar {
 	}
 }
 
-# Misc, User Commands
-exec compton -f
-exec_always feh --bg-scale /home/jasper/wallpaper/Ballon.jpg
-exec_always xrdb /home/jasper/.Xresources
-#i3lock
-bindsym $mod+shift+x exec i3lock --color "$bgcolor"
-#bindsym $mod+d exec rofi -show run -font "System San Franciso Display 18"
 bindsym $mod+d exec ~/.scripts/rofi.sh
+bindsym $mod+shift+x exec i3lock --color "$bgcolor"
+exec_always feh --bg-scale /home/jasper/Wallpaper/porsche.jpg
+exec compton -f
