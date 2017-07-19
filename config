@@ -188,13 +188,12 @@ new_window pixel 0
 
 hide_edge_borders none
 
-gaps inner 50
+gaps inner 60
 gaps outer 25
 
 bar {
 	position top
-        #status_command ~/.scripts/mybar.sh
-	status_command i3blocks
+	status_command i3status
 	colors {
 		background $bg-color
 	    	separator #757575
@@ -205,7 +204,7 @@ bar {
 	}
 }
 
-bindsym $mod+d exec ~/.scripts/rofi.sh
+bindsym $mod+d exec /home/jasper/.scripts/rof.sh
 bindsym $mod+shift+x exec i3lock --color "$bgcolor"
 exec_always feh --bg-scale /home/jasper/Wallpaper/porsche.jpg
 exec compton -f
