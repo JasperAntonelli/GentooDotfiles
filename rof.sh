@@ -1,0 +1,1 @@
+rofi -show run -lines 3 -eh 2 -width 100 -padding 1000 -bw 0 -color-window "#2f343f, #2f343f, #2f343f" -color-normal "#2f343f, #d7e1e7, #2f343f, #2f343f, #b896fa" -color-active "#2f343f, #d7e1e7, #2f343f, #2f343f, #7da6ec" -color-urgent "#2f343f, #dc322f, #2f343f, #dc322f, #2f343f" -font "System San Francisco Display 32"
